@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Weekend 5</title>
+    <!-- <link rel="stylesheet" href="/vendors/bootstrap.min.css" /> -->
+    <link rel="stylesheet" href="/styles/style.css" />
+    <!-- Angular -->
+    <script type="text/javascript" src="/vendors/angular.min.js"></script>
+    <script type="text/javascript" src="/scripts/ang_app.js"></script>
+    <a href="/">Random Pets</a>
+    <a href="/favlist">Favorite Pets</a>
+</head>
+<body ng-app="myApp">
+    <h1>Favorites</h1>
+    <div class="container" ng-controller="PetController">
+      <div ng-repeat="pet in favoriteArray">
+        <h3>Species: {{pet.animal}} Name: {{pet.name}}</h3>
+        <img ng-src="{{pet.photo}}" />
+        <p>{{pet.description}}</p>
+      </div>
